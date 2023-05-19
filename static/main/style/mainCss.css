@@ -1,0 +1,152 @@
+.logoText {
+    display: none;
+}
+@media (min-width: 1440px) {
+    .logoText {
+        color: #9d02fd;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 65px;
+        font-family: UnBounded;
+        font-weight: bold;
+        display: block;
+    }
+}
+.logo {
+    width: 250px;
+    position: absolute;
+    left: 10%;
+    top: 25px;
+}
+header {
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    left: 0;
+    top: 0;
+    background: url("../images/123.jpg");
+    background-position: center;
+    z-index: 10;
+}
+@font-face {
+    src: url("../fonts/Unbounded-VariableFont_wght.ttf");
+    font-family: UnBounded;
+}
+body {
+    background-color: #111111;
+}
+.in {
+    position: fixed;
+    background-image: url("../images/bg.jpeg");
+    background-attachment: scroll;
+    opacity: 0.3;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.menu {
+    position: absolute;
+    width: 160px;
+    top: 35px;
+    right: 10%;
+}
+.menu1 {
+    position: absolute;
+    width: 300px;
+    top: 125px;
+    color: #9d02fd;
+    font-size: 25px;
+    font-family: UnBounded;
+    right: 15px;
+    display: none;
+    list-style-type: none;
+    background-color: #1F2833;
+    padding: 0px 15px 0px 15px;
+    opacity: 0.9;
+}
+li {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: #9d02fd 1px solid;
+    padding: 15px 15px 15px 15px;
+}
+a {
+    color: #9d02fd;
+    text-decoration: none;
+}
+.info {
+    margin: auto;
+    margin-top: 115px;
+    margin-bottom: 150px;
+    min-width: 420px;
+    color: #9d02fd;
+    padding: 50px 50px 50px 50px;
+    font-size: 30px;
+    width: 50%;
+    bottom: 0;
+    opacity: 0.9;
+    text-align: center;
+    background-color: #1F2833;
+    font-family: UnBounded;
+}
+footer {
+    background-color: white;
+    font-family: UnBounded;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 10px 10px 10px;
+    height: 50px;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.5;
+}
+p.text {
+    text-align: left;
+    width: 100%;
+    color: white;
+
+}
+.bos {
+    margin: auto;
+    width: 100%;
+    max-height: 450px;
+}
+input {
+    left: 45px;
+    width: 99%;
+    height: 50px;
+    font-size: 30px;
+    background-color: #9d02fd;
+    color: white;
+    font-family: UnBounded;
+    text-align: center;
+}
+form {
+    text-align: left;
+    width: 100%;
+    height: 150px;
+}
+fieldset {
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border: 0px;
+}
+.bl1 {
+    order:1;
+    text-align: center;
+}
+.bl2 {
+    text-align: center;
+    order:2;
+}
+.bl3 {
+    order:3;
+}
+iframe {
+    max-width: 100%;
+}

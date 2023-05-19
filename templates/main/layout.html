@@ -1,0 +1,29 @@
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'main/style/mainCss.css' %}" type="text/css" rel="stylesheet">
+    <script src="{% static 'main/script/script.js' %}"></script>
+    <header>
+        <a href="{% url 'home' %}"><img class="logo" src="{% static 'main/images/logoQ.png' %}"></a>
+        <p class="logoText">Услугами довольны 10 000+ игроков</p>
+        <nav class="mainMenu" onmouseover="showMenu()" onmouseleave="hideMenu()">
+            <img class="menu" src="{% static 'main/images/menu1.png' %}">
+            <ul id="menuP" class="menu1">
+                <a href="{% url 'home' %}"><li style="color:#66FCF1;border-color:#66FCF1">На главную</li></a>
+                <a href="boost.html"><li>Заказать буст</li></a>
+                <a href="{% url 'help' %}"><li>Советы и рекомендации</li></a>
+                <a href="become_a_booster.html"><li>Стать бустером</li></a>
+                <a href="{% url 'about' %}"><li>О нас</li></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="in">
+    </div>
+    {% block content %}{% endblock %}
+    <footer>
+        <h2>Связь: JustBoost@boost.ru</h2>
+    </footer>
+</head>
+</html>

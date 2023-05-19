@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+    <body>
+    <div class="info">
+        <h1>Кто мы?</h1>
+          <p class="text">Мы стоим у истоков буста в Доте. Еще во времена Garena главный бустер нашей команды
+            искал и выполнял заказы по бусту аккаунтов на форумах.</p>
+        <img src="{% static 'main/images/3.jpg' %}" class="bos">
+        <p class="text">Наши лучшие бустеры имеют достаточно MMR, чтобы играть с лучшими игроками мира,
+        в частности с чемпионами The International.</p>
+        <img src="{% static 'main/images/4.jpeg' %}" class="bos">
+        <p class="text">Выбирая наши услуги, вы выбираете лучшие услуги по бусту аккаунтов Dota 2!</p>
+    </div>
+    </body>
+{% endblock %}
