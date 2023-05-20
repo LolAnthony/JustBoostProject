@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <body>
+    <div class="info" style="padding-bottom: 100px">
+        <h1>Личный кабинет</h1>
+    <form onsubmit="" style="padding-bottom: 60px">
+        <p style="width: 45%; margin: auto">Логин<input required placeholder="Email" id="email" name="current" type="text" class="inp"></p>
+        <p style="width: 45%; margin: auto">Пароль<input required placeholder="********" id="password" name="future" type="password" class="inp"></p>
+        <input style="width: 45%; display: block; margin: 15px auto" onclick="" class="sub" type="submit" value="Войти">
+    </form>
+        <h3><a href="" style="margin: auto; padding-bottom: 50px; font-size: 15px">Регистрация</a></h3>
+    </div>
+    </body>
+{% endblock %}

@@ -1,10 +1,10 @@
 .logoText {
     display: none;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
     .logoText {
         color: #9d02fd;
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
         margin-top: 65px;
         font-family: UnBounded;
