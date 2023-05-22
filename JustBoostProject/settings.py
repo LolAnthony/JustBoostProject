@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     'account',
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -89,7 +93,7 @@ DATABASES = {
 }
 
 AUTH_USER_MODEL = 'account.User'
-LOGIN_REDIRECT_URL = 'account/home'
+LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = ''
 
 # Password validation

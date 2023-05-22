@@ -15,7 +15,7 @@
         {% csrf_token %}
         <button type="submit" class="btn btn-success">Отправить</button>
     </form>
-        <h3><a href="" style="margin: auto; padding-bottom: 50px; font-size: 15px">Регистрация</a></h3>
+        <h3><a href="{% url 'register' %}" style="margin: auto; padding-bottom: 50px; font-size: 15px">Регистрация</a></h3>
     </div>
     </body>
 {% endblock %}

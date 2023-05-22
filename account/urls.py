@@ -3,7 +3,8 @@ from account.views import Register
 from . import views
 
 urlpatterns = [
-    path('', include('django.contrib.auth.urls')),
+    path('account/', include('django.contrib.auth.urls')),
     path('register/', Register.as_view(), name='register'),
-    path('account', views.home, name='home')
+    path('home/', views.lk, name='lk'),
+    path('logout/', views.mylogout, name='logout'),
 ]
