@@ -14,7 +14,7 @@
                 <a href="{% url 'home' %}"><li style="color:#66FCF1;border-color:#66FCF1">На главную</li></a>
                 <a href="boost.html"><li>Заказать буст</li></a>
                 <a href="{% url 'help' %}"><li>Советы и рекомендации</li></a>
-                <a href="{% url 'lk' %}"><li>Личный кабинет</li></a>
+                <a href="{% if user.is_authenticated %}{% url 'home' %}{% else %}{% url 'login' %}{% endif %}"><li>Личный кабинет</li></a>
                 <a href="{% url 'about' %}"><li>О нас</li></a>
             </ul>
         </nav>

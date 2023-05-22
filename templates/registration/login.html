@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <body>
+    <div class="info" style="padding-bottom: 100px">
+        <h1>Личный кабинет</h1>
+
+    {%  if form.errors %}
+        <p> {{ form.errors.error }}</p>
+    {% endif %}
+
+    <form action="{% url 'login' %}" method="post" style="padding-bottom: 60px">
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Отправить</button>
+    </form>
+        <h3><a href="" style="margin: auto; padding-bottom: 50px; font-size: 15px">Регистрация</a></h3>
+    </div>
+    </body>
+{% endblock %}

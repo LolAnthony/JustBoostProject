@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <body>
+    <div class="info" style="padding-bottom: 1000px">
+        <h1>Регистрация</h1>
+    <form action="{% url 'register' %}" method="post">
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    </div>
+    </body>
+{% endblock %}
