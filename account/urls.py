@@ -7,4 +7,6 @@ urlpatterns = [
     path('register/', Register.as_view(), name='register'),
     path('home/', views.lk, name='lk'),
     path('logout/', views.mylogout, name='logout'),
+    path('boost/', views.boost, name='boost'),
+    path('makeapplicate', views.applicate, name='makeapplicate'),
 ]
