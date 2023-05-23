@@ -5,20 +5,20 @@
     <body>
     <div class="in">
     </div>
-    <div class="info" style="padding-bottom: 300px">
+    <div class="info" style="padding-bottom: 550px">
         <h1>У вас есть 5500+MMR и вы серьезно относитесь к игре?</h1>
         <p class="text">Значит вам стоит подать к нам заявку!</p>
         <img src="{% static 'main/images/z.png' %}" style="max-width: 47%" class="bos">
         <form method="post">
             <fieldset>
-                <p class="bl1">Ваш MMR <input placeholder="Текущий" id="inp1" name="mmr" type="text" class="inp"></p>
-                <p class="bl2">Количество часов<input placeholder="В сумме" id="inp2" name="hours" type="text" class="inp"></p>
+                <p class="bl1">Ваш MMR <input required placeholder="Текущий" id="inp1" name="mmr" type="text" class="inp"></p>
+                <p class="bl2">Количество часов<input required placeholder="В сумме" id="inp2" name="hours" type="text" class="inp"></p>
             </fieldset>
             <fieldset>
-                <p class="bl1">Discord для собеседования<input placeholder="123#1234" name="discord" type="text" class="inp"></p>
+                <p class="bl1">Discord для собеседования<input required placeholder="123#1234" name="discord" type="text" class="inp"></p>
                 <p class="bl2">Можете работать самозанятым?<input type="checkbox" name="self_employed"></p>
             </fieldset>
-            <p class="bl1">Опыт работы<input placeholder="Краткое описание" name="exp" type="text" class="inp"></p>
+            <p class="bl1">Опыт работы<input placeholder="Компания в которой работали" name="exp" type="text" class="inp"></p>
             <input class="sub" type="submit" value="Отправить заявку">
         </form>
     </div>
