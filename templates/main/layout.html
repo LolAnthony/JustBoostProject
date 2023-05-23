@@ -12,7 +12,7 @@
             <img class="menu" src="{% static 'main/images/menu1.png' %}">
             <ul id="menuP" class="menu1">
                 <a href="{% url 'index' %}"><li style="color:#66FCF1;border-color:#66FCF1">На главную</li></a>
-                <a href="boost.html"><li>Заказать буст</li></a>
+                <a href="{% url 'boost' %}"><li>Заказать буст</li></a>
                 <a href="{% url 'help' %}"><li>Советы и рекомендации</li></a>
                 <a href="{% if user.is_authenticated %}{% url 'lk' %}{% else %}{% url 'login' %}{% endif %}"><li>Личный кабинет</li></a>
                 <a href="{% url 'about' %}"><li>О нас</li></a>

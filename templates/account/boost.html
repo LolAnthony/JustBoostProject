@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+    <body>
+    <div class="info" style="padding-bottom: 425px">
+        <h1>Безопасное и быстрое исполнение</h1>
+        <p class="text">Более сотни 5500+MMR бустеров готовы выполнить ваш заказ</p>
+        <p class="text">Оставьте заявку и вскоре с вами свяжется исполнитель</p>
+        <form onsubmit="getprice()" method="post" onchange="count()">
+            <fieldset>
+                <p class="bl1">Ваш MMR <input placeholder="Текущий" id="inp1" name="current" type="text" class="inp"></p>
+                <p class="bl2">Будущий MMR<input placeholder="Желаемый" id="inp2" name="future" type="text" class="inp"></p>
+            </fieldset>
+            <fieldset>
+                <p class="bl1">Steam Email <input placeholder="123@mail.ru" id="inp1" name="email" type="text" class="inp"></p>
+                <p class="bl2">Steam Password<input placeholder="********" id="inp2" name="password" type="password" class="inp"></p>
+            </fieldset>
+            <fieldset>
+            <p class="bl1">Discord/vk для связи<input placeholder="123#123" name="discord" type="text" class="inp"></p>
+            <input id="lastprice" hidden name="price">
+            </fieldset>
+            <p style="text-align: center; margin-top: -2%" id="price">Цена:0</p>
+        <input class="sub" type="submit" value="Отправить заказ">
+        </form>
+    </div>
+    </body>
+{% endblock %}
