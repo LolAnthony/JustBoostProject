@@ -1,0 +1,48 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block content %}
+    <body>
+    <div class="info">
+    <form method="post" action="{% url 'see_applications' %}">
+    {% csrf_token %}
+    <table class="table">
+    <colgroup>
+        <col style="width: 5%">
+        <col style="width: 5%">
+        <col style="width: 5%">
+        <col style="width: 5%">
+        <col style="width: 35%">
+        <col style="width: 5%">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Рейтинг</th>
+            <th>Часов</th>
+            <th>Налог</th>
+            <th>Связь</th>
+            <th>Опыт работы</th>
+            <th>Роль</th>
+            <th>Принять</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for appl in applications %}
+            <tr>
+                <td>{{ appl.1 }}</td>
+                <td>{{ appl.2 }}</td>
+                <td>{{ appl.3 }}</td>
+                <td>{{ appl.4 }}</td>
+                <td>{{ appl.6 }}</td>
+                <td>{{ appl.7 }}</td>
+                <td><input type="hidden" value="{{ appl.0 }}" name="appid">
+                    <input type="hidden" value="{{ appl.5 }}" name="usid">
+                    <button type="submit" value="accept" name="action">Да</button>
+                <button type="submit" value="reject" name="action">Нет</button></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    </form>
+    </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block content %}
+    <body>
+    <div class="info">
+    <form method="post" action="{% url 'bought_orders' %}">
+    {% csrf_token %}
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Пароль</th>
+            <th>Связь</th>
+            <th>Начальный</th>
+            <th>Конечный</th>
+            <th>Цена</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ord in ords %}
+            <tr>
+                <td>{{ ord.0 }}</td>
+                <td>{{ ord.1 }}</td>
+                <td>{{ ord.2 }}</td>
+                <td>{{ ord.3 }}</td>
+                <td>{{ ord.4 }}</td>
+                <td>{{ ord.5 }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    </form>
+    </div>
+    </body>
+{% endblock %}

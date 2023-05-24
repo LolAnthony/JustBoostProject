@@ -1,12 +1,22 @@
-{{% extends 'main/layout.html' %}
+{% extends 'main/layout.html' %}
 {% block content %}
     <body>
     <div class="info">
+    <hr>
     {% if user.is_authenticated %}
-        <a href="{% url 'makeapplicate' %}">Стать бустером</a><hr><br>
-        <a href="{% url 'logout' %}">Logout</a>
+        {% if 1 in user_role %}
+            <a href="{% url 'see_applications' %}">Просмотреть заявки</a><hr>
+        {% endif %}
+        {% if 2 in user_role %}
+            <a href="{% url 'take_order' %}">Взять заказ</a><hr>
+            <a href="{% url 'my_orders' %}">Мои заказы</a><hr>
+        {% else %}
+            <a href="{% url 'make_application' %}">Стать бустером</a><hr>
+        {% endif %}
+        <a href="{% url 'bought_orders' %}">Мои заявки на буст</a><hr>
+        <a href="{% url 'logout' %}">Выйти</a><hr>
     {% else %}
-        <a href="{% url 'login' %}"%}>Login</a>
+        <a href="{% url 'login' %}"%}>Авторизоваться</a><hr>
     {% endif %}
     </div>
     </body>

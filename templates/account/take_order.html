@@ -1,0 +1,35 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block content %}
+    <body>
+    <div class="info">
+    <form method="post" action="{% url 'take_order' %}">
+    {% csrf_token %}
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Начальный рейтинг</th>
+            <th>Конечный рейтинг</th>
+            <th>Оплата</th>
+            <th>Дата</th>
+            <th>Исполнить</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ord in orders %}
+            <tr>
+                <td>{{ ord.0 }}</td>
+                <td>{{ ord.1 }}</td>
+                <td>{{ ord.2 }}</td>
+                <td>{{ ord.3 }}</td>
+                <td><input type="hidden" value="{{ us }}" name="usid">
+                    <input type="hidden" value="{{ ord.4 }}" name="ordid">
+                    <button type="submit" value="accept" name="action">Взять заказ</button></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    </form>
+    </div>
+    </body>
+{% endblock %}

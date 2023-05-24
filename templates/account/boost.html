@@ -11,6 +11,7 @@
                 <p class="bl1">Ваш MMR <input placeholder="Текущий" id="inp1" name="current" type="text" class="inp"></p>
                 <p class="bl2">Будущий MMR<input placeholder="Желаемый" id="inp2" name="future" type="text" class="inp"></p>
             </fieldset>
+            {% csrf_token %}
             <fieldset>
                 <p class="bl1">Steam Email <input placeholder="123@mail.ru" id="inp1" name="email" type="text" class="inp"></p>
                 <p class="bl2">Steam Password<input placeholder="********" id="inp2" name="password" type="password" class="inp"></p>
